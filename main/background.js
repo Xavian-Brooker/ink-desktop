@@ -108,7 +108,7 @@ app.on('open-url', function (event, requestUrl) {
     return;
   }
 
-  const openImportProject = (rendererWindow) => {
+  openImportProject = (rendererWindow) => {
     ipc.callRenderer(rendererWindow, 'to-renderer', {
       event: 'import-project-from-external',
       data: {
