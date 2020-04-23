@@ -62,10 +62,10 @@ export default function ProjectInvite({ project, user }) {
     );
     setMailSent(true);
   });
-
+  const truncatedName = project.name.length > 25 ? `${project.name.substring(0, 25)}...` : project.name
   return (
     <Panel md={3}>
-      <PanelHeader title={project.name.toUpperCase()} fontSize="18px" />
+      <PanelHeader title={truncatedName.toUpperCase()} fontSize="18px" />
       <Form className="m-2" onSubmit={handleInvite}>
         <Space padding="40px">
           <div>

@@ -6,6 +6,8 @@ const Text = styled.div`
   font-weight: ${props => props.weight || props.theme['$font-weight-base']};
   line-height: ${props => props.lineHeight || props.theme['$line-height-base']};
   text-align: ${props => props.align || 'left'};
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export default Text;
