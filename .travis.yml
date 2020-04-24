@@ -10,9 +10,9 @@ script:
 - npm run-script coverage
 install: npm install && npm run install-app-deps
 before_deploy:
-- echo -e 'SENDGRID_TOKEN=$SENDGRID_TOKEN' >> .env
-- echo -e 'GITHUB_USER=$INK_GITHUB_USER' >> .env
-- echo -e 'GITHUB_TOKEN=$INK_GITHUB_TOKEN' >> .env
+- echo -e SENDGRID_TOKEN=$SENDGRID_TOKEN >> .env
+- echo -e GITHUB_USER=$INK_GITHUB_USER >> .env
+- echo -e GITHUB_TOKEN=$INK_GITHUB_TOKEN >> .env
 - npm run-script build:all
 deploy:
   provider: releases
